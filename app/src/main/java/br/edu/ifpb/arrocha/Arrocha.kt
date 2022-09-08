@@ -1,10 +1,11 @@
 package br.edu.ifpb.arrocha
 import android.util.Log
+import java.io.Serializable
 import java.util.*
 import kotlin.random.Random
 
 
-class Arrocha {
+class Arrocha: Serializable {
     private var maior : Int;
     private var menor : Int;
     private var secreto: Int;
@@ -63,5 +64,15 @@ class Arrocha {
 
     fun getStatus():Status{
         return this.status
+    }
+
+    fun getSecreto():Int{
+        return  this.secreto
+    }
+    fun getMenor(): Int{
+        return this.menor
+    }
+    fun getMaior(): Int{
+        return this.maior
     }
 }

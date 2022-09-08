@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/llMain"
+
+<LinearLayout
+
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -26,7 +19,7 @@
             android:gravity="center">
 
             <EditText
-                android:id="@+id/etNumero"
+                android:id="@+id/etMainNumero"
                 android:hint="Informe o número"
                 android:inputType="number"
                 android:gravity="center"
@@ -42,46 +35,13 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/btArrocha"
+                android:id="@+id/btMainArrocha"
                 android:text="Arrochar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
 
-    </LinearLayout>
+</LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/llPerdeu"
-        android:visibility="invisible"
-        android:background="#FF0000"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <TextView
-            android:text="PERDEU !"
-            android:textSize="42sp"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/llGanhou"
-        android:visibility="invisible"
-        android:background="#079302"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:text="GANHOU !"
-            android:textSize="42sp"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
-
-</FrameLayout>
