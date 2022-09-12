@@ -1,11 +1,14 @@
 package br.edu.ifpb.arrocha
 
+import android.content.Context
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 
 class ResultadoActivity : AppCompatActivity() {
     private lateinit var tvResult: TextView
@@ -28,11 +31,14 @@ class ResultadoActivity : AppCompatActivity() {
                 this.tvResult.setText(jogo.getStatus().toString())
                 this.tvNumeroSorteado.setText("O Número sorteado é: ${jogo.getSecreto()}")
                 this.tvIntervalo.setText("O intervalo é ${jogo.getMenor()} e ${jogo.getMaior()}")
+                this.llResultado.setBackgroundColor(ContextCompat.getColor(this, R.color.green))
 
             }else{
                 this.tvResult.setText(jogo.getStatus().toString())
                 this.tvNumeroSorteado.setText("O Número sorteado é: ${jogo.getSecreto()}")
                 this.tvIntervalo.setText("O intervalo é ${jogo.getMenor()} e ${jogo.getMaior()}")
+                this.llResultado.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
+
             }
 
 
